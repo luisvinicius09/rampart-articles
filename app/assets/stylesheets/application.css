@@ -13,3 +13,54 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex {
+  display: flex
+}
+
+.d-grid {
+  display: grid
+}
+
+.container {
+  padding: 1rem
+}
+
+header {
+  height: 3em;
+}
+
+.nav-header {
+  justify-content: space-between;
+}
+
+.logo-title {
+  font-size: xx-large;
+}
+
+.logo-image {
+  width: auto;
+  height: 50px;
+}
+
+.links-container {
+  justify-content: space-between;
+}
+
+.nav-btn {
+
+}
+
+footer {
+  height: 3em;
+}
+
+.footer-container {
+  justify-content: space-between;
+}

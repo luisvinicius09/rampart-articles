@@ -6,15 +6,61 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="container">
+      <header>
+        <nav class="nav-header d-flex">
+          <div class="logo-container d-flex">
+            <h1 class="logo-title">Rampart</h1>
+            <%= image_tag("logo.jpg", :alt => "logo", :class => "logo-image") %>
+          </div>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+          <div class="links-container d-flex">
+            <%= link_to 'HOME', root_path, class: 'nav-btn' %>
+          </div>
 
-    <%= yield %>
+          <div>
+            <%= link_to 'LOGIN', new_user_session_path, class: 'nav-btn' %>
+            <%= link_to 'REGISTER', new_user_registration_path, class: 'nav-btn' %>
+          </div>
+        </nav>
+      </header>
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <%= yield %>
+
+      <footer>
+        <div class="footer-container d-flex">
+          <div class="logo-container d-flex">
+            <h1 class="logo-title">Rampart</h1>
+            <%= image_tag("logo.jpg", :alt => "logo", :class => "logo-image") %>
+          </div>
+
+          <div class=" d-flex">
+            <a href="#" class="footer-btn">Privacy Policy</a>
+            <a href="#" class="footer-btn">Terms & Conditions</a>
+            <p>Copyright 2014.</p>
+            <p>All rights reserved.</p>
+          </div>
+
+          <div class=" d-flex">
+            <p>Connect with us:</p>
+            <img src="#" alt="">
+            <img src="#" alt="">
+            <img src="#" alt="">
+          </div>
+
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
