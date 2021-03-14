@@ -64,3 +64,8 @@ footer {
 .footer-container {
   justify-content: space-between;
 }
+
+.img {
+  width: auto;
+  height: 100px;
+}
