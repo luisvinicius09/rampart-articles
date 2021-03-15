@@ -146,6 +146,50 @@ footer {
 }
 
 /* Forms */
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .form-container {
-  
+  border: 3px solid #4c433c;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.form-title {
+  color: #f86309;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  font-weight: bold;
+  color: #4c433c;
+}
+
+.field input {
+  width: 250px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #4c433c;
+}
+
+.actions input{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #4c433c;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.actions input:hover {
+  background-color: #f86309;
 }
