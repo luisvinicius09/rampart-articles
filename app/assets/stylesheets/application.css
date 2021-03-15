@@ -14,10 +14,20 @@
  *= require_self
  */
 
+ /* 
+  main color: #f86309 rgb(247,99,10)
+  secondary color: #4c433c rgb(76,67,60)
+ */
+
 * {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100vh;
 }
 
 .d-flex {
@@ -29,11 +39,17 @@
 }
 
 header {
-  height: 3em;
+  height: 75px;
+  color: #4c433c;
 }
 
 .nav-header {
   justify-content: space-between;
+}
+
+.logo-container {
+  margin: 10px;
+  align-items: center;
 }
 
 .logo-title {
@@ -43,18 +59,55 @@ header {
 .logo-image {
   width: auto;
   height: 50px;
+  margin-left: 5px;
 }
 
 .links-container {
   justify-content: space-between;
 }
 
+.main {
+  padding-bottom: 75px;
+}
+
 footer {
   height: 3em;
+  color: #fff;
+  background-color: #4c433c;
+  height: 75px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-container {
   justify-content: space-between;
+}
+
+.copyright {
+  align-items: center;
+}
+
+.copyright a {
+  margin-right: 8px;
+  text-decoration: none;
+  color: #f86309;
+}
+
+.copyright p {
+  margin-right: 6px;
+}
+
+.social-media {
+  align-items: center;
+}
+
+.social-icon {
+  position: relative;
+  top: 3px;
+  width: auto;
+  height: 35px;
+  margin: 5px
 }
 
 .articles-container {
