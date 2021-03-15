@@ -28,9 +28,8 @@
 
           <div>
             <% if user_signed_in? %>
-              <a>
-                Write a post
-              </a>
+              <%= link_to 'WRITE A POST', new_article_path, class: 'nav-btn' %>
+              <%= link_to current_user.name, class: 'nav-btn' %>
               <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'nav-btn' %>
             <% else %>
               <%= link_to 'LOGIN', new_user_session_path, class: 'nav-btn' %>
