@@ -31,7 +31,7 @@
               <a>
                 Write a post
               </a>
-              <%= link_to 'LOG OUT', destroy_user_session_path, class: 'nav-btn' %>
+              <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'nav-btn' %>
             <% else %>
               <%= link_to 'LOGIN', new_user_session_path, class: 'nav-btn' %>
               <%= link_to 'REGISTER', new_user_registration_path, class: 'nav-btn' %>
