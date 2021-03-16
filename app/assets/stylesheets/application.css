@@ -53,7 +53,30 @@ header {
 
 .links-container {
   justify-content: space-between;
+  align-items: center;
 }
+
+.reg-links {
+  align-items: center;
+}
+
+.reg-links a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.nav-btn {
+  color: #4c433c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-btn:hover {
+  color: #f86309;
+  text-decoration: underline;
+}
+
+/* Main Content */
 
 .main {
   padding-bottom: 75px;
@@ -143,6 +166,37 @@ footer {
 .ctg-four {
   background: url('img-6.jpg');
   background-size: cover;
+}
+
+.ctg-title {
+  color: #fff;
+  text-decoration: underline yellow 3px;
+  margin: 15px;
+}
+
+.ctg-phrase {
+  color: #fff;
+  font-weight: 700;
+  font-size: large;
+  position: absolute;
+  z-index: 6;
+  bottom: 40px;
+  left: 15px;
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, #000 160%);
+  z-index: 5;
 }
 
 /* Forms */
