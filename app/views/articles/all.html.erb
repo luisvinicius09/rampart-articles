@@ -1,0 +1,17 @@
+<div>
+  <% @articles.each do |item| %>
+    <div>
+      <div>
+        <%= item.title %>
+      </div>
+      <div>
+        <h3>Author:</h3>
+        <%= item.user_id%>
+      </div>
+      <div>
+        <%= link_to 'READ MORE', article_path(item.id) %>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+</div>

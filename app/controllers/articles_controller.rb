@@ -4,6 +4,9 @@ class ArticlesController < ApplicationController
 
   # GET /articles or /articles.json
   def index
+  end
+
+  def all
     @articles = Article.all
   end
 
@@ -65,6 +68,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :content)
+      params.require(:article).permit(:title, :content, :image_url, :category_id)
     end
 end
