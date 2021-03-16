@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_190345) do
+ActiveRecord::Schema.define(version: 2021_03_16_201022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2021_03_16_190345) do
     t.integer "article_id"
   end
 
+  add_foreign_key "articles", "categories"
   add_foreign_key "articles", "users"
   add_foreign_key "votes", "articles"
   add_foreign_key "votes", "users"
