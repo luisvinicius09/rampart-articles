@@ -12,13 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title %></br>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :content %></br>
     <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %></br>
+    <%= form.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %></br>
+    <%= form.select :category_id, [['Business', 1], ['Sports', 2], ['Fashion', 3], ['Enterteinment', 4]] %>
   </div>
 
   <div class="actions">
