@@ -24,13 +24,17 @@
 
           <div class="links-container d-flex">
             <%= link_to 'HOME', root_path, class: 'nav-btn' %>
-            <%= link_to 'ARTICLES', all_path, class: 'nav-btn'%>
+            <%= link_to 'RECENT', all_path, class: 'nav-btn' %>
+            <%= link_to 'BUSINESS', business_path, class: 'nav-btn' %>
+            <%= link_to 'SPORTS', sports_path, class: 'nav-btn' %>
+            <%= link_to 'FASHION', fashion_path, class: 'nav-btn' %>
+            <%= link_to 'ENTERTAINMENT', entertainment_path, class: 'nav-btn' %>
           </div>
 
           <div class="reg-links d-flex">
             <% if user_signed_in? %>
               <%= link_to 'WRITE A POST', new_article_path, class: 'nav-btn' %>
-              <%= link_to current_user.name, class: 'nav-btn' %>
+              <%= link_to current_user.name, profile_path(current_user.id), class: 'nav-btn' %>
               <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'nav-btn' %>
             <% else %>
               <%= link_to 'LOGIN', new_user_session_path, class: 'nav-btn' %>

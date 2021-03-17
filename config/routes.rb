@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   root to: "articles#index"
 
   get 'all', to: 'articles#all', as: 'all'
+  get 'profile', to: 'users#profile', as: 'profile'
+  get 'business', to: 'articles#filtered', as: 'business'
+  get 'sports', to: 'articles#filtered', as: 'sports'
+  get 'fashion', to: 'articles#filtered', as: 'fashion'
+  get 'entertainment', to: 'articles#filtered', as: 'entertainment'
 end
