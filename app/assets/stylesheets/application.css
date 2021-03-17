@@ -247,3 +247,53 @@ footer {
 .actions input:hover {
   background-color: #f86309;
 }
+
+/* All articles */
+
+.all-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.all-item {
+  border: 1px solid #4c433c;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.all-item > div {
+  justify-content: space-between;
+}
+
+.all-item a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #4c433c
+}
+
+.all-item a:hover {
+  color: #f86309;
+}
+
+/* Individual article */
+
+.single-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.single-container > div {
+  flex-direction: column;
+}
+
+.single-image {
+  width: 800px;
+  height: auto;
+  object-fit: cover;
+}
+
+.single-image img {
+  height: 100%;
+  width: 100%;
+}
