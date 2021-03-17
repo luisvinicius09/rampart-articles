@@ -1,20 +1,19 @@
 <div class="single-container d-flex">
   <div class=" d-flex">
-    <div>
-      <%= upvote_or_downvote_btn(@article)%>
-      <%= edit_btn(current_user)%>
-    </div>
-    <div>
+    <div class="single-header d-flex">
       <h1><%= @article.title %></h1>
+      <div>
+        <%= upvote_or_downvote_btn(@article) %>
+        <%= edit_btn(current_user)%>
+      </div>
     </div>
 
     <div class="single-image">
       <%= image_tag(@article.image_url) %>
     </div>
 
-    <div>
-      <strong>Content:</strong>
-      <%= @article.content %>
+    <div class="single-content">
+      <p><%= @article.content %></p>
     </div>
   </div>
 </div>

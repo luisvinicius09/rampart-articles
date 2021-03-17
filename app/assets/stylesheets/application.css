@@ -281,19 +281,42 @@ footer {
 .single-container {
   max-width: 800px;
   margin: auto;
+  line-height: 25px;
 }
 
 .single-container > div {
   flex-direction: column;
 }
 
+.single-header {
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
 .single-image {
   width: 800px;
   height: auto;
   object-fit: cover;
+  margin-bottom: 15px;
 }
 
 .single-image img {
   height: 100%;
   width: 100%;
+}
+
+.single-content {
+  flex-direction: column;
+}
+
+.vote-btn {
+  text-decoration: none;
+  color: #4c433c;
+  font-weight: bold;
+
+}
+
+.vote-btn:hover {
+  text-decoration: underline;
+  color: #f86309;
 }
