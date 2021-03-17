@@ -1,15 +1,20 @@
+<div class="single-container d-flex">
+  <div class=" d-flex">
+    <div>
+      <%= upvote_or_downvote_btn(@article)%>
+      <%= edit_btn(current_user)%>
+    </div>
+    <div>
+      <h1><%= @article.title %></h1>
+    </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+    <div class="single-image">
+      <%= image_tag(@article.image_url) %>
+    </div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
-
-<%= upvote_or_downvote_btn(@article)%>
-</br>
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+    <div>
+      <strong>Content:</strong>
+      <%= @article.content %>
+    </div>
+  </div>
+</div>
