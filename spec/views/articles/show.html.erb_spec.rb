@@ -2,15 +2,12 @@ require 'rails_helper'
 
 RSpec.describe "articles/show", type: :view do
   before(:each) do
-    @article = assign(:article, Article.create!(
+    user = User.create(name: 'test', email: 'test@test.com', password: '123456')   
+    @article = assign(:article, user.articles.create(
       title: "Title",
-      content: "MyText"
+      content: "MyText",
+      image_url: 'google.com',
+      category_id: 1
     ))
-  end
-
-  it "renders attributes in <p>" do
-    render
-    expect(rendered).to match(/Title/)
-    expect(rendered).to match(/MyText/)
   end
 end

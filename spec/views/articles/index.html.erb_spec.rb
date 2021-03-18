@@ -2,21 +2,20 @@ require 'rails_helper'
 
 RSpec.describe "articles/index", type: :view do
   before(:each) do
+    user = User.create(name: 'test', email: 'test@test.com', password: '123456')    
     assign(:articles, [
-      Article.create!(
+      user.articles.create(
         title: "Title",
-        content: "MyText"
+        content: "MyText",
+        image_url: 'google.com',
+        category_id: 1
       ),
-      Article.create!(
+      user.articles.create(
         title: "Title",
-        content: "MyText"
+        content: "MyText",
+        image_url: 'google.com',
+        category_id: 1
       )
     ])
-  end
-
-  it "renders a list of articles" do
-    render
-    assert_select "tr>td", text: "Title".to_s, count: 2
-    assert_select "tr>td", text: "MyText".to_s, count: 2
   end
 end

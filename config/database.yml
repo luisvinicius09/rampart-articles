@@ -9,6 +9,7 @@ default: &default
   encoding: unicode
   host: localhost
   username: postgres
+  password: 0906
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
