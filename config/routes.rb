@@ -9,8 +9,8 @@ Rails.application.routes.draw do
 
   get 'all', to: 'articles#all', as: 'all'
   get 'profile', to: 'users#profile', as: 'profile'
-  get 'business', to: 'filters#filtered', as: 'business'
-  get 'sports', to: 'filters#filtered', as: 'sports'
-  get 'fashion', to: 'filters#filtered', as: 'fashion'
-  get 'entertainment', to: 'filters#filtered', as: 'entertainment'
+  get 'business', to: 'filters#business', as: 'business'
+  get 'sports', to: 'filters#sports', as: 'sports'
+  get 'fashion', to: 'filters#fashion', as: 'fashion'
+  get 'entertainment', to: 'filters#entertainment', as: 'entertainment'
 end
