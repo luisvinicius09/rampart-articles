@@ -1,17 +1,17 @@
 class FiltersController < ApplicationController
   def business
-    @bus_articles = Article.where(category_id: 1)
+    @bus_articles = Article.all.business
   end
 
   def sports
-    @spo_articles = Article.where(category_id: 2)
-  end
+    @spo_articles = Article.all.sports
+  end 
 
   def fashion
-    @fas_articles = Article.where(category_id: 3)
+    @fas_articles = Article.all.fashion
   end
 
   def entertainment
-    @ent_articles = Article.where(category_id: 4)
+    @ent_articles = Article.all.entertainment
   end
 end

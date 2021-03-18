@@ -4,6 +4,11 @@ class ArticlesController < ApplicationController
 
   # GET /articles or /articles.json
   def index
+    @recent_bus_article = Article.all.business.first
+    @recent_sports_article = Article.all.sports.first
+    @recent_fashion_article = Article.all.fashion.first
+    @recent_ent_article = Article.all.entertainment.first
+    @most_popular_article = Article.most_popular_article.first
   end
 
   def all
