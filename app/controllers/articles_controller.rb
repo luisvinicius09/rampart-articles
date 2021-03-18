@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
   end
 
   def all
-    @articles = Article.all.ordered_by_most_recent
+    @articles = Article.all.includes(:category).ordered_by_most_recent
   end
 
   # GET /articles/1 or /articles/1.json
