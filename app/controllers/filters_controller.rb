@@ -1,4 +1,6 @@
 class FiltersController < ApplicationController
+  before_action :authenticate_user!
+  
   def business
     @bus_articles = Article.all.business
   end
