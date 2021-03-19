@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'articles/index', type: :view do
   before(:each) do
-    user = User.create(name: 'test', email: 'test@test.com', password: '123456')    
+    user = User.create(name: 'test', email: 'test@test.com', password: '123456')
     assign(:articles, [
       user.articles.create(
         title: 'Title',
