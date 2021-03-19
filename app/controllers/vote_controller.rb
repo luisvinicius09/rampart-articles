@@ -4,11 +4,10 @@ class VoteController < ApplicationController
 
     if @vote.save
       flash[:notice] = 'You upvoted this article!'
-      redirect_to article_path(params[:article_id])
     else
-      flash[:alert] = "You can't vote in this article!"
-      redirect_to article_path(params[:article_id])
+      flash[:alert] = 'You can't vote in this article!'
     end
+    redirect_to article_path(params[:article_id])
   end
 
   def destroy
@@ -16,10 +15,9 @@ class VoteController < ApplicationController
     if vote
       vote.destroy
       flash[:notice] = 'You downvoted this article!'
-      redirect_to article_path(params[:article_id])
     else
-      flash[:alert] = "Something went wrong with your vote!"
-      redirect_to article_path(params[:article_id])
+      flash[:alert] = 'Something went wrong with your vote!'
     end
+    redirect_to article_path(params[:article_id])
   end
 end
