@@ -65,3 +65,5 @@ Style/RedundantSort:
   Enabled: false
 Layout/FirstArgumentIndentation:
   Enabled: false
+Layout/FirstArrayElementIndentation:
+  Enabled: false
