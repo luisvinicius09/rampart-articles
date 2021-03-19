@@ -9,6 +9,9 @@ class ArticlesController < ApplicationController
     @recent_fashion_article = Article.all.fashion.first
     @recent_ent_article = Article.all.entertainment.first
     @most_popular_article = Article.most_popular_article.first
+    rescue Sprockets::Rails::Helper::AssetNotFound => e
+      print e
+    end
   end
 
   def all
