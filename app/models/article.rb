@@ -12,6 +12,6 @@ class Article < ApplicationRecord
   scope :fashion, -> { where('category_id = ?', 3).order(created_at: :desc) }
   scope :entertainment, -> { where('category_id = ?', 4).order(created_at: :desc) }
   scope :most_popular_article, lambda {
-    where(id: Article.all.joins(:votes).group(:id).count.sort_by { |_k, v| v }.last
+    where()
   }
 end
