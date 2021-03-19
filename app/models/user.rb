@@ -5,5 +5,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :articles, foreign_key: :user_id
   has_many :votes, foreign_key: :user_id
-
 end

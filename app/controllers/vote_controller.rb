@@ -5,7 +5,7 @@ class VoteController < ApplicationController
     if @vote.save
       flash[:notice] = 'You upvoted this article!'
     else
-      flash[:alert] = 'You can't vote in this article!'
+      flash[:alert] = "You can't vote in this article!"
     end
     redirect_to article_path(params[:article_id])
   end

@@ -59,3 +59,7 @@ Style/HashTransformValues:
   Enabled: false
 Style/SymbolArray:
   Enabled: false
+Style/HashSyntax:
+  Enabled: false
+Style/RedundantSort:
+  Enabled: false
