@@ -5,7 +5,7 @@ class FiltersController < ApplicationController
 
   def sports
     @spo_articles = Article.all.sports
-  end 
+  end
 
   def fashion
     @fas_articles = Article.all.fashion
