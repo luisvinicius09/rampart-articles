@@ -16,6 +16,16 @@ html {
   min-height: 100vh;
 }
 
+.notice {
+  text-align: center;
+  margin: 5px;
+}
+
+.alert {
+  text-align: center;
+  margin: 5px;
+}
+
 .d-flex {
   display: flex;
 }
