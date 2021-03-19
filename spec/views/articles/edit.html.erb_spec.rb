@@ -9,6 +9,6 @@ RSpec.describe 'articles/edit', type: :view do
                           content: 'MyText',
                           image_url: 'google.com',
                           category_id: 1
-                          ))
+                      ))
   end
 end
