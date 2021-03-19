@@ -7,8 +7,6 @@
   </div><%= @most_popular_article.title %>
     </div>
   </a>
-  <div class="side-img bg-cover overlay">
-  </div>
   <a href=<%= article_path(@recent_bus_article.id) %> class="ctg-img-container bg-cover overlay">
     <div>
       <%= image_tag(@recent_bus_article.image_url, alt: "Business image", class: "ctg-image") %>
