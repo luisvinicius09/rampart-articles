@@ -63,3 +63,5 @@ Style/HashSyntax:
   Enabled: false
 Style/RedundantSort:
   Enabled: false
+Layout/FirstArgumentIndentation:
+  Enabled: false
