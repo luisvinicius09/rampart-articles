@@ -1,6 +1,6 @@
 # Rampart Articles
 
-> This repo is a simple impletation of a articles website, where you can create articles and interact with them through the vote system.
+> This repo is a simple implementation of a articles website, where you can create articles and interact with them through the vote system.
 
 ## Built With
 
