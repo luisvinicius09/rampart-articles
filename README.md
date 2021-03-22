@@ -79,4 +79,6 @@ Feel free to check the [issues page](https://github.com/luisvinicius09/ror-socia
 
 Give a ⭐️ if you like this project!
 
+## License
 
+Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
