@@ -5,7 +5,7 @@ class Article < ApplicationRecord
 
   belongs_to :user
   has_many :votes, foreign_key: :article_id
-  has_many :category
+  belongs_to :category
 
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
 
