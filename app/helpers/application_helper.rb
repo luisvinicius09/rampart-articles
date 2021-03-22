@@ -3,7 +3,7 @@ module ApplicationHelper
     if sign_in
       render :partial => 'logged'
     else
-      render :partial => 'user'
+      render :partial => 'normal'
     end
   end
 end
