@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1 or /articles/1.json
   def show
-    # .
+    # This method provides the ability to display the articles in a single page
   end
 
   # GET /articles/new
@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    # .
+    # This method provides the ability to edit articles created by the user
   end
 
   # POST /articles or /articles.json
