@@ -1,6 +1,8 @@
 # Rampart Articles
 
 > This repo is a simple implementation of a articles website, where you can create articles and interact with them through the vote system.
+> 
+![image](https://user-images.githubusercontent.com/60414217/112017583-814b5b80-8b0c-11eb-81e4-1d3e3a1f3d5c.png)
 
 ## Built With
 
@@ -35,7 +37,10 @@ Setup database with:
 
 ```
    rails db:create
+   
    rails db:migrate
+   
+   rails db:seed 
 ```
 ### Usage
 
