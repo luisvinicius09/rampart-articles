@@ -31,14 +31,7 @@
           </div>
 
           <div class="reg-links d-flex">
-            <% if user_signed_in? %>
-              <%= link_to 'WRITE A POST', new_article_path, class: 'nav-btn' %>
-              <%= link_to current_user.name, profile_path(current_user.id), class: 'nav-btn' %>
-              <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'nav-btn' %>
-            <% else %>
-              <%= link_to 'LOGIN', new_user_session_path, class: 'nav-btn' %>
-              <%= link_to 'REGISTER', new_user_registration_path, class: 'nav-btn' %>
-            <%end%>
+            <%= buttons(user_signed_in?) %>
           </div>
         </nav>
       </header>
