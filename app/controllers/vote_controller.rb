@@ -1,6 +1,6 @@
 class VoteController < ApplicationController
   def create
-    @vote = Vote.new(user_id: current_user.id, article_id: params[:article_id])
+    @vote = Vote.new(user_id: current_user.id, article_id: [:article_id])
 
     if @vote.save
       flash[:notice] = 'You upvoted this article!'
@@ -19,5 +19,11 @@ class VoteController < ApplicationController
       flash[:alert] = 'Something went wrong with your vote!'
     end
     redirect_to article_path(params[:article_id])
+  end
+
+  private
+
+  def vote_params
+    params.require(:vote).permit(:article_id)
   end
 end
