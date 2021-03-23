@@ -1,11 +1,11 @@
 <div class="filtered-container d-grid">
   <% @spo_articles.each do |item| %>
-    <div class="d-flex">
+    <div class="test d-flex">
       <div class="filtered-image">
         <%= image_tag(item.image_url) %>
       </div>
       <div>
-        <h3><%= item.category.name %></h3>
+        <h3>Sports</h3>
         <div class="filtered-text">
           <strong><%= item.title %></strong>
         </div>
