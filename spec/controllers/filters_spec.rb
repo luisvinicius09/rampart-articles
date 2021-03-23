@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Articles", type: :request do
+RSpec.describe 'Articles', type: :request do
   it 'tests the GET /business' do
     get '/business'
     expect(response).to have_http_status(200)
