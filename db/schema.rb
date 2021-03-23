@@ -15,15 +15,6 @@ ActiveRecord::Schema.define(version: 2021_03_23_211133) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "article_and_categories", force: :cascade do |t|
-    t.bigint "article_id", null: false
-    t.bigint "category_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["article_id"], name: "index_article_and_categories_on_article_id"
-    t.index ["category_id"], name: "index_article_and_categories_on_category_id"
-  end
-
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -37,6 +28,15 @@ ActiveRecord::Schema.define(version: 2021_03_23_211133) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.integer "priority"
+  end
+
+  create_table "connection", force: :cascade do |t|
+    t.bigint "article_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_id"], name: "index_connection_on_article_id"
+    t.index ["category_id"], name: "index_connection_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -57,10 +57,10 @@ ActiveRecord::Schema.define(version: 2021_03_23_211133) do
     t.integer "article_id"
   end
 
-  add_foreign_key "article_and_categories", "articles"
-  add_foreign_key "article_and_categories", "categories"
   add_foreign_key "articles", "categories"
   add_foreign_key "articles", "users"
+  add_foreign_key "connection", "articles"
+  add_foreign_key "connection", "categories"
   add_foreign_key "votes", "articles"
   add_foreign_key "votes", "users"
 end
