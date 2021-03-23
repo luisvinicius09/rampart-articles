@@ -325,7 +325,8 @@ footer {
   margin-left: 40px;
 }
 
-.test:nth-child(3n), .test:nth-child(4n) {
+.test:nth-child(3n),
+.test:nth-child(4n) {
   flex-direction: row-reverse;
 }
 
