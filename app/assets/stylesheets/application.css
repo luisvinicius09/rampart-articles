@@ -325,8 +325,12 @@ footer {
   margin-left: 40px;
 }
 
+.test:nth-child(3n), .test:nth-child(4n) {
+  flex-direction: row-reverse;
+}
+
 .filtered-image {
-  width: 300px;
+  width: 330px;
   height: 310px;
   margin-right: 25px;
 }
