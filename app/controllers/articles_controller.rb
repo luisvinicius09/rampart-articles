@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
     @recent_sports_article = Article.all.sports.first
     @recent_fashion_article = Article.all.fashion.first
     @recent_ent_article = Article.all.entertainment.first
-    @most_popular_article = Article.most_popular_article.first
+    @most_popular_article = Vote.popular_article
   end
 
   def all
