@@ -36,6 +36,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
+        Connection.new(article_id: @article.id, category_id: article_params[:category_id]).save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
