@@ -1,6 +1,7 @@
 class VoteController < ApplicationController
   def create
-    @vote = Vote.new(user_id: current_user.id, article_id: [:article_id])
+    @vote = Vote.new(vote_params)
+    @vote.user_id = current_user.id
 
     if @vote.save
       flash[:notice] = 'You upvoted this article!'
@@ -24,6 +25,6 @@ class VoteController < ApplicationController
   private
 
   def vote_params
-    params.require(:vote).permit(:article_id)
+    params.permit(:article_id)
   end
 end
