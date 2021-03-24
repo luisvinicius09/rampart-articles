@@ -1,0 +1,21 @@
+<div class="filtered-container d-grid">
+  <% @ent_articles.each do |item| %>
+    <div class="test d-flex">
+      <div class="filtered-image">
+        <%= image_tag(item.image_url) %>
+      </div>
+      <div>
+        <h3>Entertainment</h3>
+        <div class="filtered-text">
+          <strong><%= item.title %></strong>
+        </div>
+        <div class="filtered-text">
+          <%= %>
+        </div>
+        <div class="filtered-text">
+          <%= link_to 'READ MORE', article_path(item.id) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

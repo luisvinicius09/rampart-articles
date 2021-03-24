@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RampartArticles</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <nav class="nav-header d-flex">
+          <div class="logo-container d-flex">
+            <h1 class="logo-title">Rampart</h1>
+          </div>
+
+          <div class="links-container d-flex">
+            <%= link_to 'HOME', root_path, class: 'nav-btn' %>
+            <%= link_to 'RECENT', all_path, class: 'nav-btn' %>
+            <%= link_to 'BUSINESS', business_path, class: 'nav-btn' %>
+            <%= link_to 'SPORTS', sports_path, class: 'nav-btn' %>
+            <%= link_to 'FASHION', fashion_path, class: 'nav-btn' %>
+            <%= link_to 'ENTERTAINMENT', entertainment_path, class: 'nav-btn' %>
+          </div>
+
+          <div class="reg-links d-flex">
+            <%= buttons(user_signed_in?) %>
+          </div>
+        </nav>
+      </header>
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <div class="main">
+        <%= yield %>
+      </div>
+
+      <footer>
+        <div class="footer-container d-flex">
+          <div class="logo-container d-flex">
+            <h1 class="logo-title">Rampart</h1>
+          </div>
+
+          <div class="copyright d-flex">
+            <a href="#" class="footer-btn">Privacy Policy</a>
+            <a href="#" class="footer-btn">Terms & Conditions</a>
+            <p>Copyright 2014.</p>
+            <p>All rights reserved.</p>
+          </div>
+
+          <div class="social-media d-flex">
+            <p>Connect with us:</p>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+          </div>
+
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

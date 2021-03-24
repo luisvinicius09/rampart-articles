@@ -1,0 +1,40 @@
+<div class="articles-container d-grid">
+  <a href="" class="main-img bg-cover overlay">
+    <div>
+      <div>
+        <%= image_tag(@most_popular_article.image_url, alt: "Business image", class: "ctg-image") %>
+        <p class="ctg-phrase"><%= @most_popular_article.title %></p>
+      </div><%= @most_popular_article.title %>
+    </div>
+  </a>
+  <div class="side-img bg-cover overlay">
+  </div>
+  <a href=<%= article_path(@recent_bus_article.id) %> class="ctg-img-container bg-cover overlay">
+    <div>
+      <%= image_tag(@recent_bus_article.image_url, alt: "Business image", class: "ctg-image") %>
+      <h2 class="ctg-title">Business</h2>
+      <p class="ctg-phrase"><%= @recent_bus_article.title %></p>
+    </div>
+  </a>
+  <a href=<%= article_path(@recent_sports_article.id) %> class="ctg-img-container bg-cover overlay">
+    <div>
+      <%= image_tag(@recent_sports_article.image_url, alt: "Sports image", class: 'ctg-image')%>
+      <h2 class="ctg-title">Sports</h2>
+      <p class="ctg-phrase"><%= @recent_sports_article.title %></p>
+    </div>
+  </a>
+  <a href=<%= article_path(@recent_fashion_article.id) %> class="ctg-img-container bg-cover overlay">
+    <div>
+      <%= image_tag(@recent_fashion_article.image_url, alt: "Fashion image", class: 'ctg-image')%>
+      <h2 class="ctg-title">Fashion</h2>
+      <p class="ctg-phrase"><%= @recent_fashion_article.title %></p>
+    </div>
+  </a>
+  <a href=<%= article_path(@recent_ent_article.id) %> class="ctg-img-container bg-cover overlay">
+    <div>
+      <%= image_tag(@recent_ent_article.image_url, alt: "Enterteinment image", class: 'ctg-image')%>
+      <h2 class="ctg-title">Entertainment</h2>
+      <p class="ctg-phrase"><%= @recent_ent_article.title %></p>
+    </div>
+  </a>
+</div>

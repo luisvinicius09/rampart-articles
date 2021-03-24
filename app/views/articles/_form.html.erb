@@ -1,0 +1,28 @@
+<%= form_with(model: article) do |form| %>
+
+  <%= render "devise/shared/error_messages", resource: article %>
+
+  <div class="field">
+    <%= form.label :title %></br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %></br>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %><p>(Make sure it's a valid link)</p></br>
+    <%= form.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %></br>
+    <%= form.select :category_id, [['Business', 1], ['Sports', 2], ['Fashion', 3], ['Enterteinment', 4]] %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
