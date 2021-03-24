@@ -2,6 +2,7 @@ class Article < ApplicationRecord
   validates :title, :presence => true
   validates :content, :presence => true
   validates :image_url, :presence => true
+  validates :image_url, format: {with: URI.regexp(%w[http https]), message: 'This not a valid URL'}
 
   belongs_to :user
   has_many :votes, foreign_key: :article_id
